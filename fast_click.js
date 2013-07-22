@@ -56,15 +56,11 @@ app.directive('fastClick', function ($parse, Modernizr) {
           startX = touches[0].clientX;
           startY = touches[0].clientY;
 
-          element.trigger('mousedown');
           canceled = false;
         });
 
         element.on('touchend', function (event) {
-
           event.stopPropagation();
-          element.trigger('mouseup', true);
-
           clickFunction();
         });
 
