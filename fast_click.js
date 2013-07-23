@@ -1,4 +1,4 @@
-i/**
+/**
  * @author Joe Gaudet - joe@learndot.com
  * @copyright  ©2012 Matygo Educational Incorporated operating as Learndot
  * @license  Licensed under MIT license (see LICENSE.md)
@@ -20,7 +20,7 @@ app.directive('fastClick', function ($parse, Modernizr) {
         /**
          * Track the start points
          */
-          startX,
+        startX,
 
         startY,
 
@@ -28,12 +28,12 @@ app.directive('fastClick', function ($parse, Modernizr) {
          * Whether or not we have for some reason
          * cancelled the event.
          */
-          canceled,
+        canceled,
 
         /**
          * Our click function
          */
-          clickFunction = function (event) {
+        clickFunction = function (event) {
           if (!canceled) {
             scope.$apply(function () {
               fn(scope, {$event: event});
